@@ -1,0 +1,29 @@
+#!/bin/bash
+
+sudo apt-get update
+sudo apt-get install nodejs
+sudo apt-get install npm
+sudo ln -s /usr/bin/nodejs /usr/bin/nod
+
+echo "you should have installed git and ant into your system"
+#sudo apt-get install git
+#sudo apt-get install ant
+
+sudo npm install -g phonegap
+sudo apt-get install lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6
+echo "setup android sdk manually or edit this script"
+#sudo tar -zxvf ~/Downloads/android-sdk_r24.0.2-linux.tgz -C /usr/local/
+#echo 'export PATH=$PATH:/usr/local/android-sdk-linux/' >> ~/.bashrc
+#echo 'export PATH=$PATH:/usr/local/android-sdk-linux/tools' >> ~/.bashrc
+#echo 'export PATH=$PATH:/usr/local/android-sdk-linux/platform-tools' >> ~/.bashrc
+#echo 'export PATH=$PATH:/usr/local/android-sdk-linux/build-tools' >> ~/.bashrc
+#source ~/.bashrc
+
+echo "installing the emulator"
+chmod u+x genymotion-2.1.0_x64.bin
+./genymotion-2.1.0_x64.bin
+
+sudo apt-get install virtualbox
+cd genymotion
+./genymotion
+
